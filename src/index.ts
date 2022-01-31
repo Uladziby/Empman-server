@@ -6,17 +6,17 @@ import router from "./router";
 const port = process.env.PORT || 4000;
 
 const app = express();
-
+app.use(cors({credentials: true, origin: true}));
 
 /* app.use(createProxyMiddleware('/login',
 {
   target:"https://empman-uladziby.herokuapp.com",
   changeOrigin:true,
 })) */
-app.use(cors(/* {
+/* app.use(cors({
   origin: 'https://empman-uladziby.herokuapp.com',
   credentials: true,
-} */))
+})) */
 app.use(express.json());
 app.use("", router);
 app.set('view engine', 'ejs')

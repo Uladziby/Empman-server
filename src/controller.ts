@@ -5,7 +5,7 @@ import { DataEmployees, DataUsers } from "./db";
 const Controller = {
   
   getAll(req: any, res: any): IUserData[] {
-    console.log(req);
+    console.log(req.body);
     try {
       return res.json(DataUsers);
     } catch (e) {
@@ -23,6 +23,7 @@ const Controller = {
   },
   checkLogIn(req: any, res: any): void {
     try {
+      console.log(req)
       const user = validateLoginData(req.body);
       console.log(user);
       if (user) {
