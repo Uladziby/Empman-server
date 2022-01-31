@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
+    "http-proxy-middleware": "^2.0.2",
     "uid": "^2.0.0"
   },
   "devDependencies": {
