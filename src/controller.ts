@@ -3,6 +3,7 @@ import { createID, findIndex, findUser, validateLoginData } from "./commonFunc";
 import { DataEmployees, DataUsers } from "./db";
 
 const Controller = {
+  
   getAll(req: any, res: any): IUserData[] {
     console.log(req);
     try {
