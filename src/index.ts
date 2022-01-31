@@ -1,9 +1,7 @@
 import express from "express";
 import cors from "cors";
 import router from "./router";
-import proxy from "http-proxy-middleware"
-import { DotenvConfigOptions } from "dotenv";
-import { createProxyMiddleware } from "http-proxy-middleware";
+
 
 const port = process.env.PORT || 4000;
 
