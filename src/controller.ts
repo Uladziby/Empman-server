@@ -23,7 +23,7 @@ const Controller = {
   },
   checkLogIn(req: any, res: any): void {
     try {
-      console.log(req)
+      console.log(req.body)
       const user = validateLoginData(req.body);
       console.log(user);
       if (user) {

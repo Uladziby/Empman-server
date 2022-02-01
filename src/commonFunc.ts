@@ -3,7 +3,6 @@ import { uid } from "uid";
 import { DataEmployees, DataUsers } from "./db";
 import { IDataLogIn, IEmployee, IResponseDataUser } from "./intefaces";
 
-// eslint-disable-next-line import/prefer-default-export
 export function validateLoginData(data: IDataLogIn): boolean|  IResponseDataUser{
   const validateEMail = DataUsers.find((item) => item.email === data.email);
   if (validateEMail) {

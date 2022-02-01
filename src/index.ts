@@ -4,9 +4,15 @@ import router from "./router";
 
 
 const port = process.env.PORT || 4000;
-
+var options = {
+  origin: 'http://localhost:8080',
+  credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}
 const app = express();
-app.use(cors({credentials: true, origin: true}));
+app.use(cors(options));
 
 /* app.use(createProxyMiddleware('/login',
 {

@@ -12,7 +12,7 @@ router.get("/main/emp", Controller.getALlEmployees);
 router.delete("/main/emp/:id", Controller.deleteEmp);
 router.post("/main/emp/", Controller.createEmp);
 router.get("/detail/:id", Controller.getDetailEmp);
-router.patch("/detail/:id", Controller.updateDetailEmp);
+router.put("/detail/:id", Controller.updateDetailEmp);
 router.post("/register", Controller.createNewUser);
 
 router.get("/login", function (req, res, next) {
