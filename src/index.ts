@@ -5,7 +5,7 @@ import router from "./router";
 
 const port = process.env.PORT || 4000;
 var options = {
-  origin: 'http://localhost:8080',
+  origin: 'empman-uladziby.netlify.app',
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
