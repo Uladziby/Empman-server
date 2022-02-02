@@ -3,7 +3,14 @@ import { createID, findIndex, findUser, validateLoginData } from "./commonFunc";
 import { DataEmployees, DataUsers } from "./db";
 
 const Controller = {
-  
+  ping(req: any, res: any) {
+    try {
+      res.status(200).json("ping");
+    } catch (e) {
+      console.log(e);
+      return res.status(500).json(e);
+    }
+  },
   getAll(req: any, res: any): IUserData[] {
     try {
       return res.json(DataUsers);
