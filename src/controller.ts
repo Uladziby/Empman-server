@@ -22,6 +22,7 @@ const Controller = {
   create(req: any, res: any): void {
     try {
       DataUsers.push(req.body);
+      console.log(DataUsers[length-1])
       res.status(200).json("ok");
     } catch (e) {
       res.status(500).json(e);
@@ -124,7 +125,7 @@ const Controller = {
         isAdmin: false,
       };
       DataUsers.push(newUser);
-      console.log(newUser);
+      console.log(DataUsers[DataUsers.length-1])
       return res.status(200).json("user is created");
     } catch (error) {
       console.log(error, "employee not found");
