@@ -6,7 +6,6 @@ const whitelist = ["https://empman-uladziby.herokuapp.com"]
 const port = process.env.PORT || 4000;
 var options = {
   oorigin: '*',
-  credentials: true,
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
 }
 const app = express();
