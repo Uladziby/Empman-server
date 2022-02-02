@@ -2,14 +2,12 @@ import express from "express";
 import cors from "cors";
 import router from "./router";
 
-
+const whitelist = ["https://empman-uladziby.herokuapp.com"]
 const port = process.env.PORT || 4000;
 var options = {
-  origin: 'empman-uladziby.netlify.app',
+  oorigin: '*',
   credentials: true,
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-  optionsSuccessStatus: 204
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
 }
 const app = express();
 app.use(cors(options));
